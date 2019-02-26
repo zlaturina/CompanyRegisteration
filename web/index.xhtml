@@ -9,13 +9,18 @@
         <h:form>
         Welcome to register your Company
         <h:panelGrid columns="2">
-            <h:outputLabel value="Company name "/>
+            <h:outputLabel value=" Register a new Company "/>
             <h:inputText value="#{companyController.name}"/>
         
                          <h:message for="number" style="color:blueviolet"/>
                          <h:commandButton value="Submit" action="#{companyController.register(c)}"/>
                                        
         </h:panelGrid>
+        <h:dataTable value="#{companyController.companyList}" var="c">
+        
+            <h:column> #{c.name}</h:column>
+        
+        </h:dataTable>
     </h:form>
     </h:body>
 </html>
