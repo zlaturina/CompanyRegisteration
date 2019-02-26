@@ -24,8 +24,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Table(name = "COMPANY")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Company.findAll", query = "SELECT c FROM Company c")
-    , @NamedQuery(name = "Company.findById", query = "SELECT c FROM Company c WHERE c.id = :id")})
+    @NamedQuery(name = "Company.findAllCompanies", query = "SELECT c FROM Company c")
+    , @NamedQuery(name = "Company.findCompanyById", query = "SELECT c FROM Company c WHERE c.id = :id")})
 public class Company implements Serializable {
 
     public Company(String Name) {
